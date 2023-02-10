@@ -33,5 +33,18 @@ namespace ProcessesApp
         {
             timer1.Interval = Int32.Parse(textBox1.Text) * 1000;
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                Process[] processesByName = Process.GetProcessesByName(listBox1.Items[listBox1.SelectedIndex].ToString());
+                if (processesByName.Length > 0) 
+                {
+                    label_id.Text = processesByName[0].Id.ToString();
+                    label_startTime.Text = processesByName[0].StartTime.ToString("H:m:s:fff");
+                }
+            }
+        }
     }
 }
