@@ -51,8 +51,7 @@ namespace ProcessesApp
                             break;
                         }
                         orderNumber++;
-                    }
-                    
+                    }                    
                     counter++;
                 }
                 Process[] processesByName = Process.GetProcessesByName(listBox1.Items[listBox1.SelectedIndex].ToString());
@@ -65,12 +64,7 @@ namespace ProcessesApp
                     label_threadCount.Text = processesByName[orderNumber].Threads.Count.ToString();
                     label_copyProcess.Text = processesByName.Count().ToString();
                     
-                }
-                /*foreach (Process process in processesByName)
-                {
-                    MessageBox.Show(process.GetHashCode().ToString());
-                }*/
-                
+                }  
             }
         }
 
