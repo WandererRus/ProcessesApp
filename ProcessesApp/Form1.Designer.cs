@@ -44,6 +44,7 @@
             this.label_processorTime = new System.Windows.Forms.Label();
             this.label_threadCount = new System.Windows.Forms.Label();
             this.label_copyProcess = new System.Windows.Forms.Label();
+            this.btn_closeProcess = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -68,7 +69,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(165, 23);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "5";
+            this.textBox1.Text = "20";
             // 
             // button1
             // 
@@ -174,11 +175,22 @@
             this.label_copyProcess.Size = new System.Drawing.Size(0, 15);
             this.label_copyProcess.TabIndex = 13;
             // 
+            // btn_closeProcess
+            // 
+            this.btn_closeProcess.Location = new System.Drawing.Point(458, 398);
+            this.btn_closeProcess.Name = "btn_closeProcess";
+            this.btn_closeProcess.Size = new System.Drawing.Size(75, 23);
+            this.btn_closeProcess.TabIndex = 14;
+            this.btn_closeProcess.Text = "Закрыть";
+            this.btn_closeProcess.UseVisualStyleBackColor = true;
+            this.btn_closeProcess.Click += new System.EventHandler(this.btn_closeProcess_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 450);
+            this.Controls.Add(this.btn_closeProcess);
             this.Controls.Add(this.label_copyProcess);
             this.Controls.Add(this.label_threadCount);
             this.Controls.Add(this.label_processorTime);
@@ -218,5 +230,6 @@
         private Label label_processorTime;
         private Label label_threadCount;
         private Label label_copyProcess;
+        private Button btn_closeProcess;
     }
 }
